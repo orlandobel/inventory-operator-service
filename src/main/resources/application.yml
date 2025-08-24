@@ -26,6 +26,8 @@ eureka:
     fetch-registry: true
   instance:
     prefer-ip-address: false
+    hostname: ${RAILWAY_PRIVATE_DOMAIN:localhost}
+    instance-id: ${spring.application.name}:${server.port}
     non-secure-port-enabled: true
     secure-port-enabled: false
     non-secure-port: ${server.port}
